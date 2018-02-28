@@ -1,6 +1,4 @@
 const Discord = require('discord.js');
-let fs = require('fs');
-let parse = require('csv-parse');
 const client = new Discord.Client();
 const BOT_ID = process.env.BOT_ID;
 let tower;
