@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 let fs = require('fs');
 let parse = require('csv-parse');
 const client = new Discord.Client();
-const BOT_ID = '396231733093335041';
+const BOT_ID = process.env.BOT_ID;
 let tower;
 
 client.on('ready', () => {
@@ -15,7 +15,7 @@ client.on('message', message => {
         if (msg !== '') {
             switch (msg) {
                 case 'help':
-                    message.reply('**Tower puzzle:** Give all the numbers in clockwise ↻ order separated with a `-`. Started with the number on the top left corner. Example: `3-1-2-3-2-2-3-2-3-1-1-3-2-3-2-4-1-3-2-2`');
+                    message.reply(process.env.HELP_TEXT);
                     break;
                 default:
                     break;
@@ -37,7 +37,7 @@ function isMentioned(message, id) {
 
 
 // THIS  MUST  BE  THIS  WAY
-client.login('Mzk2MjMxNzMzMDkzMzM1MDQx.DSehFA.v6jI3IB8C-c47wGC9x8HxR-m5jo');
+client.login(process.env.BOT_TOKEN);
 
 class Tower {
     constructor() {
@@ -133,10 +133,10 @@ class Tower {
 
                 return str;
             } else {
-                return 'No solution found!';
+                return process.env.SOLUTION_NOT_FOUND;
             }
         } else {
-            return 'No correct board found!';
+            return process.env.NO_CORRECT_BOARD_FOUND;
         }
     }
 
