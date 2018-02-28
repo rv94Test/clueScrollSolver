@@ -7,6 +7,7 @@ let tower;
 
 client.on('ready', () => {
     tower = new Tower();
+    console.log('ready');
 });
 
 client.on('message', message => {
