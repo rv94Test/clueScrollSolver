@@ -1,0 +1,16 @@
+{
+  "name": "Clue scroll",
+  "description": "clue scroll solvers",
+  "version": "0.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "csv": "^2.0.0",
+    "discord.io": "^2.5.3",
+    "discord.js": "^11.1.0",
+    "request": "2.81.0",
+    "winston": "^2.4.0"
+  }
+}
