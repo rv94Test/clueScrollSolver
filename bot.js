@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const BOT_ID = process.env.BOT_ID;
 let tower;
 
 client.on('ready', () => {
@@ -9,7 +8,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (isMentioned(message, BOT_ID)) {
+    if (isMentioned(message, client.user.id)) {
         const msg = message.content.replace(new RegExp('<@[a-zA-Z0-9]*> '), '');
         if (msg !== '') {
             switch (msg) {
@@ -22,7 +21,7 @@ client.on('message', message => {
         }
     }
     tower.setTower(message.content);
-    if (tower.isTower() && message.author.id !== BOT_ID) {
+    if (tower.isTower() && message.author.id !== client.user.id) {
         message.reply(tower.solutions());
     }
 });
