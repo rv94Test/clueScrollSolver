@@ -9,7 +9,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (isMentioned(message, client.user.id)) {
-        const msg = message.content.replace(new RegExp('<@[a-zA-Z0-9]*> '), '');
+        const msg = message.content.replace(new RegExp('<@[!a-zA-Z0-9]*> '), '');
         if (msg !== '') {
             switch (msg) {
                 case 'help':
