@@ -1,7 +1,7 @@
 {
   "name": "Tower_solver",
   "description": "Tower solver",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
