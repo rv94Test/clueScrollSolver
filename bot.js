@@ -131,7 +131,7 @@ class Tower {
 
                 return str;
             } else {
-                return process.env.SOLUTION_NOT_FOUND;
+                return 'No solution found!';
             }
         } else {
             return process.env.NO_CORRECT_BOARD_FOUND;
