@@ -2,6 +2,9 @@
   "name": "Tower_solver",
   "description": "Tower solver",
   "version": "0.0.0",
+  "engines": {
+    "node": "8.9.4"
+  },
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
