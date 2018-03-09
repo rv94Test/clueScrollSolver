@@ -131,7 +131,7 @@ class Tower {
 
                 return str;
             } else {
-                return 'No solution found!';
+                return 'No solution found! You can use `@' + client.user.username + ' help` for how to use me.';
             }
         } else {
             return process.env.NO_CORRECT_BOARD_FOUND;
