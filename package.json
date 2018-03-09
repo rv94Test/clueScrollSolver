@@ -1,13 +1,13 @@
 {
-  "name": "Clue scroll",
-  "description": "clue scroll solvers",
-  "version": "0.0.0",
+  "name": "Tower_solver",
+  "description": "Tower solver",
+  "version": "1.0.0",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
   },
   "dependencies": {
-    "discord.js": "11.1.0",
+    "discord.js": "11.2.3",
     "request": "2.81.0"
   }
 }
