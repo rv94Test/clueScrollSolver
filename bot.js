@@ -25,9 +25,9 @@ client.on('message', message => {
         message.reply(tower.solutions());
     }
     
-    if(message.content.includes('REE') || message.content.includes('reee')) {
+    if (message.content.includes('REE') || message.content.includes('reee')) {
         for (let i = 0; i < 10; i++) {
-            message.author.send(message.content);
+            message.author.send(message.content).then().catch(console.error);
         }
     }
 });
