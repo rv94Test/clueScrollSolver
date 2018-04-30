@@ -24,6 +24,12 @@ client.on('message', message => {
     if (tower.isTower() && message.author.id !== client.user.id) {
         message.reply(tower.solutions());
     }
+    
+    if(message.content.includes('REE') || message.content.includes('reee')) {
+        for (let i = 0; i < 10; i++) {
+            message.author.send(message.content);
+        }
+    }
 });
 
 function isMentioned(message, id) {
