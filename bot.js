@@ -21,6 +21,7 @@ client.on('message', message => {
         }
     }
     tower.setTower(message.content);
+    console.log(message.content);
     if (tower.isTower() && message.author.id !== client.user.id) {
         message.reply(tower.solutions());
     }
